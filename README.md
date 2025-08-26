@@ -1,8 +1,8 @@
-PJME Time Series Forecasting with XGBoost
+# PJME Time Series Forecasting with XGBoost
 
 This project demonstrates a machine learning approach to time series forecasting of regional electricity demand using XGBoost. The dataset contains hourly power consumption (in Megawatts) for the PJM East (PJME) region in the United States, and the goal is to build an accurate predictive model that can capture seasonal patterns and forecast future electricity usage.
 
-🔍 Project Overview
+**🔍 Project Overview**
 
 Objective: Forecast future PJME energy demand using historical data.
 
@@ -16,9 +16,9 @@ Model evaluation using Root Mean Squared Error (RMSE) and visual diagnostics.
 
 Outcome: The project demonstrates how traditional time series data can be reframed into a supervised learning problem and modeled effectively with gradient boosting methods.
 
-📂 Project Structure
+**📂 Project Structure**
 
-## PJME_Timeseries_Forecast_with_XGBoost.ipynb: Main notebook containing data preprocessing, feature engineering, modeling, and results.
+PJME_Timeseries_Forecast_with_XGBoost.ipynb: Main notebook containing data preprocessing, feature engineering, modeling, and results.
 
 **Sections covered:**
 
