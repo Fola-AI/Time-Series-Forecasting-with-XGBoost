@@ -1,35 +1,69 @@
-# Time Series Forecasting with XGBoost
+PJME Time Series Forecasting with XGBoost
 
-This repository demonstrates how to build a **time series forecasting model** using [XGBoost](https://xgboost.readthedocs.io/) on hourly electricity consumption data from PJME (PJM Energy). The notebook walks through the process of exploring the data, preparing it for machine learning, and training a gradient boosting model to predict future electricity demand.
+This project demonstrates a machine learning approach to time series forecasting of regional electricity demand using XGBoost. The dataset contains hourly power consumption (in Megawatts) for the PJM East (PJME) region in the United States, and the goal is to build an accurate predictive model that can capture seasonal patterns and forecast future electricity usage.
 
-## Project Overview
+🔍 Project Overview
 
-- Dataset: `PJME_hourly.csv` (hourly PJM electricity demand in MW).
-- Goal: Forecast future electricity load based on historical hourly demand.
-- Approach:
-  - Load and preprocess the time series.
-  - Train/test split (training data up to 2015, test data after 2015).
-  - Feature engineering from datetime (hour, day, month, etc.).
-  - Train an XGBoost regressor.
-  - Evaluate model performance with RMSE.
+Objective: Forecast future PJME energy demand using historical data.
 
+Techniques Used:
 
-## Usage
-Clone the repository:
+Time series feature engineering (lag features, rolling statistics, date-time decomposition).
 
-Data/PJME_hourly.csv
-Launch Jupyter Notebook:
+Gradient boosting with XGBoost for supervised regression.
 
-jupyter notebook
-Open and run:
-PJME_Timeseries_Forecast_with_XGBoost.ipynb
-Results
-Visualization of electricity demand trends and seasonality.
-Forecasting future hourly loads using XGBoost.
-Model performance evaluated with Root Mean Squared Error (RMSE).
+Model evaluation using Root Mean Squared Error (RMSE) and visual diagnostics.
 
-## Future Improvements
-Hyperparameter tuning with cross-validation.
-Experimenting with other ML/DL models (e.g., LightGBM, LSTMs).
+Outcome: The project demonstrates how traditional time series data can be reframed into a supervised learning problem and modeled effectively with gradient boosting methods.
 
-Incorporating weather and external features for better accuracy.
+📂 Project Structure
+
+## PJME_Timeseries_Forecast_with_XGBoost.ipynb: Main notebook containing data preprocessing, feature engineering, modeling, and results.
+
+**Sections covered:**
+
+Data loading and exploration
+
+Feature engineering (time-based and lag features)
+
+Train-test split respecting temporal order
+
+Model training with XGBoost
+
+Forecasting and evaluation
+
+**🛠️ Tools & Libraries**
+
+Python
+
+Pandas / NumPy – data manipulation
+
+Matplotlib / Seaborn – data visualization
+
+Scikit-learn – preprocessing, evaluation metrics
+
+XGBoost – machine learning model
+
+**📊 Results & Insights**
+
+The model successfully captured daily and seasonal electricity consumption trends.
+
+Feature engineering with lag values and rolling statistics improved forecasting accuracy.
+
+XGBoost proved effective for handling large-scale time series with non-linear patterns.
+
+**🚀 Key Learning Points**
+
+Converting time series data into a supervised learning problem can unlock powerful ML methods.
+
+Feature engineering plays a critical role in improving predictive performance.
+
+Gradient boosting (XGBoost) is highly adaptable and performs well in real-world forecasting tasks.
+
+**🔮 Future Improvements**
+
+Hyperparameter tuning with grid/random search for optimal performance.
+
+Incorporation of external covariates (e.g., temperature, holidays, weather).
+
+Comparison with other forecasting methods (Prophet, LSTM, ARIMA).
